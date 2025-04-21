@@ -4,6 +4,7 @@
 .personal__wrapper {
   display: flex;
   align-items: center;
+  overflow: hidden;
   .personal__img {
     img {
       max-width: 100%;
