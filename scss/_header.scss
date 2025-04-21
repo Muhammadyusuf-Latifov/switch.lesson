@@ -1,0 +1,43 @@
+.navbar {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: $bg-primary;
+    cursor: pointer;
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: animation 0.7s ease-in forwards;
+  }
+  &__btn {
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #fff;
+    background: $bg-primary;
+    border: 2px solid $bg-primary;
+    border-radius: 23px;
+    transition: 0.3s;
+    font-weight: 700;
+    cursor: pointer;
+    transform: translateX(50px);
+
+    opacity: 0;
+    animation: animation 0.7s ease-in forwards;
+  }
+  &__btn:hover {
+    background: #fff;
+    color: $bg-primary;
+    border: 2px solid $bg-primary;
+  }
+}
+
+@keyframes animation {
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}

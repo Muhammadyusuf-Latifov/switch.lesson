@@ -1,0 +1,139 @@
+.hero {
+  margin-bottom: 120px;
+}
+.hero__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .hero__img {
+    width: 50%;
+    opacity: 0;
+
+    animation: hero 1s ease-in forwards;
+  }
+
+  .hero__context {
+    width: 50%;
+    transform: scale(0.8);
+    opacity: 0;
+    animation: hero 0.7s ease-in forwards;
+    .hero__title {
+      font-size: 60px;
+      line-height: 85px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #00194a;
+    }
+    .hero__desc {
+      font-size: 18px;
+      color: #00194a;
+      line-height: 28px;
+      margin-bottom: 50px;
+      font-weight: 300;
+    }
+  }
+  .hero__btn {
+    padding: 20px 50px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background: $bg-primary;
+    border-radius: 30px;
+    border: 2px solid $bg-primary;
+    transition: 0.3s;
+  }
+  .hero__btn:hover {
+    color: $bg-primary;
+    background: #fff;
+  }
+}
+@keyframes hero {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1400px) {
+  .hero__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .hero__img {
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+      opacity: 0;
+
+      animation: hero 1s ease-in forwards;
+    }
+
+    .hero__context {
+      width: 50%;
+      transform: scale(0.7);
+      opacity: 0;
+      .hero__title {
+        line-height: 70px;
+      }
+    }
+  }
+}
+@media (max-width: 960px) {
+  .hero__wrapper {
+    .hero__context {
+      .hero__title {
+        font-size: 45px;
+        line-height: 55px;
+      }
+      .hero__desc {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 30px;
+      }
+      .hero__btn {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 750px) {
+  .hero__wrapper {
+    flex-direction: column-reverse;
+    .hero__img {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+
+    .hero__context {
+      text-align: center;
+      width: 100%;
+      .hero__title {
+        font-size: 45px;
+        line-height: 55px;
+      }
+      .hero__desc {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 30px;
+      }
+      .hero__btn {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .hero__wrapper {
+    .hero__context {
+      text-align: center;
+      width: 100%;
+      .hero__title {
+        font-size: 35px;
+        line-height: 55px;
+      }
+    }
+  }
+}
